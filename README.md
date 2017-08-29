@@ -1,2 +1,5 @@
 # WikiParser
-Python Library for Scraping Wikipedia Data
+WikiParser is a Python Library for thoroughly scraping Wikipedia article data.
+
+
+

@@ -64,8 +64,7 @@ sites
 urls = [i.url for i in data]
 urls
 >>> ['https://www.encyclopediaofmath.org/index.php?title=p/c020050', 'http://mathworld.wolfram.com/Calculus.html', 'http://planetmath.org/TopicsOnCalculus', 'http://djm.cc/library/Calculus_Made_Easy_Thompson.pdf', 'http://www.bbc.co.uk/programmes/b00mrfwq', 'http://www.calculus.org', 'http://cow.math.temple.edu/', 'http://www.economics.soton.ac.uk/staff/aldrich/Calculus%20and%20Analysis%20Earliest%20Uses.htm', 'http://integrals.wolfram.com/', 'http://www.ericdigests.org/pre-9217/calculus.htm', 'http://ocw.mit.edu/OcwWeb/Mathematics/index.htm', 'http://www.encyclopediaofmath.org/index.php?title=Infinitesimal_calculus&amp;oldid=18648', 'http://math.mit.edu/~djk/calculus_beginners/', 'http://www.math.ucdavis.edu/~kouba/ProblemsList.html', 'http://www.math.tamu.edu/~dallen/history/calc1/calc1.html', 'http://www.imomath.com/index.php?options=277', 'http://www.wdl.org/en/item/4327/', 'http://id.loc.gov/authorities/subjects/sh85018802']
-
-
+```
 
 
 

@@ -10,7 +10,7 @@ article.article_info()
 ```
 
 ### Getting data from InfoBox (New!)
-   ![Python Wikipedia Infobox](WikiParser/Screen Shot 2017-08-30 at 3.03.54 PM.png?raw=true)
+   ![Python Wikipedia Infobox](https://github.com/Ajax12345/WikiParser/blob/master/Screen%20Shot%202017-08-30%20at%203.03.54%20PM.png?raw=true)
 
 ```
 article.info_box()

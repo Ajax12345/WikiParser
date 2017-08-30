@@ -10,7 +10,7 @@ article.article_info()
 ```
 
 ### Getting data from InfoBox (New!)
-![Alt text](/Users/davidjpetullo/Desktop/Screen\ Shot\ 2017-08-30\ at\ 3.03.54\ PM.png)
+![Alt text](WikiParser/Screen Shot 2017-08-30 at 3.03.54 PM.png)
 
 ```
 article.info_box()

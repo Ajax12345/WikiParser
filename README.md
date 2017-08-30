@@ -19,7 +19,8 @@ article.info_box()
 
 #### Support For Multiple Languages
 WikiParser allows the user to enter the abbreviation of any of the 298 languages that Wikipedia supports. 
-```article = Wiki("/wiki/Gato", by_url = True, lang = "en")
+```
+article = Wiki("/wiki/Gato", by_url = True, lang = "en")
 ```
 
 

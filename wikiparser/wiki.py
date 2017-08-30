@@ -187,4 +187,4 @@ class Wiki:
         return new_data
 
     def __str__(self):
-return self.supported_languages
+        return self.supported_languages

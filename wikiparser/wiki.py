@@ -17,10 +17,16 @@ class NoArticlesFoundError(ValueError):
     def __init__(self, message):
         ValueError.__init__(self, message)
 
+class KeyWordYieldedNoArticles(ValueError):
+    def __init__(self, message):
+        ValueError.__init__(self, message)
+
 
 
 class Wiki:
+    __slots__ = ["query", "topics", "kwargs", "url", "data", "header", "supported_languages"]
     def __init__(self, query, **kwargs):
+
         self.query = query
         self.topics = None
         self.kwargs = kwargs
@@ -28,7 +34,7 @@ class Wiki:
         self.data = str(urllib.urlopen(self.url).read())
         self.check_invalid_article(self.data)
         self.header = self.get_header(self.data)
-        self.supported_languages = open('wiki_supported_languages.txt').read()
+        self.supported_languages = None#open('wiki_supported_languages.txt').read()
 
 
     def disambiguation(self):
@@ -73,9 +79,14 @@ class Wiki:
         '''
 
         req = requests.get(self.url)
+
         s = soup(req.text, 'lxml')#html.parser
 
         article_paragraphs = [i.text for i in s.find_all("p")]
+        #print "article_paragraphs", article_paragraphs
+
+        if len(article_paragraphs) == 1 and re.findall("[a-zA-Z0-9]{1,}\smay refer to\:", article_paragraphs[0]):
+            raise KeyWordYieldedNoArticles("could not find standalone article by name '{}'".format(re.sub("https\:\/\/en.wikipedia.org\/wiki\/", '', self.url)))
 
         lines = kwargs.get("lines", None)
         if lines is None:
@@ -188,3 +199,6 @@ class Wiki:
 
     def __str__(self):
         return self.supported_languages
+
+
+
